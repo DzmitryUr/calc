@@ -49,6 +49,13 @@ button {
   cursor: default;
 }
 
+.div-display {
+  font-size: 30px;  
+  color: white;  
+  text-align: right;
+  line-height: 35px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
