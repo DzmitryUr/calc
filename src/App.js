@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import './App.scss';
 import Display from './compenents/display'
 import { connect } from 'react-redux';
+import { simpleAction } from './actions/simpleAction'
 
 class App extends Component {
+  simpleAction = (event) => {
+    this.props.simpleAction();
+   }
+
   render() {
     return (
       <div className="App">
@@ -27,6 +32,12 @@ class App extends Component {
           <MathOperator num="." id="decimal"/>          
           <button id="equals">=</button>               
         </div>
+        <pre>
+ {
+  JSON.stringify(this.props)
+ }
+</pre>
+<button onClick={this.simpleAction}>Test redux action</button>
       </div>
     );
   }
@@ -42,9 +53,8 @@ class Digit extends Component {
   }
 
   handleClick() {
-    this.setState(state => ({
-      num: 0
-    }));
+    console.log('click');
+    //this.props.simpleAction();
   }
   
   render() {
@@ -62,4 +72,12 @@ class MathOperator extends Component {
   }
 }
 
-export default connect()(App);
+const mapStateToProps = state => ({
+  ...state
+ })
+
+ const mapDispatchToProps = dispatch => ({
+  simpleAction: () => dispatch(simpleAction())
+ })
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
