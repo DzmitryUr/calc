@@ -1,7 +1,6 @@
 $button-color: black;
 
-.App {
-  text-align: center;
+.App {  
   height: 100vh;
   display: flex;
   align-items: center;  
@@ -54,6 +53,19 @@ button {
   color: white;  
   text-align: right;
   line-height: 35px;
+}
+
+.double-width {  
+  width: 160px;
+}
+
+.background-yellow {
+  background: rgb(241, 240, 155);
+}
+
+.button-equals {  
+  position: absolute; 
+  height: 130px; bottom: 5px;
 }
 
 @keyframes App-logo-spin {
