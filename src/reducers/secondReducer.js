@@ -5,10 +5,11 @@ export default (state = 1, action) => {
       return {
        result: action.payload
       }
-     case 'ADD_VALUE':
+     case 'ADD_VALUE1':
      console.log('ADD_VALUE');
-     return action.value;
-     
+     return {
+         value: action.value
+     }
      default:
       return state
     }

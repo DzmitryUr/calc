@@ -4,3 +4,8 @@ export const simpleAction = () => dispatch => {
      payload: 'result_of_simple_action'
     })
 }
+
+export const addValue = (value) => ({    
+        type: 'ADD_VALUE',
+        value: value    
+})

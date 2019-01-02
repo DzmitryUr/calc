@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import simpleReducer from './simpleReducer';
+import value from './simpleReducer';
+import filter from './secondReducer';
 
 export default combineReducers({
- simpleReducer
+ value,
+ filter
 });
