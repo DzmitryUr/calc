@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Display from './components/Display'
+import Formula from './components/Formula'
 import AddChar from './containers/AddChar'
+import ChangeFormula from './containers/ChangeFormula'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="calc-container">
+          <Formula />
           <Display />
           <div>
             <AddChar num="C" id="clear" className="double-width background-yellow"/>
-            <AddChar num="/" id="divide"/>
-            <AddChar num="*" id="multiply"/>
+            <ChangeFormula num="/" id="divide"/>
+            <ChangeFormula num="*" id="multiply"/>
             <AddChar num="7" id="seven"/>
             <AddChar num="8" id="eight"/>
             <AddChar num="9" id="nine"/>
-            <AddChar num="-" id="subtract"/>
+            <ChangeFormula num="-" id="subtract"/>
             <AddChar num="4" id="four"/>
             <AddChar num="5" id="five"/>
             <AddChar num="6" id="six"/>          
-            <AddChar num="+" id="add"/>
+            <ChangeFormula num="+" id="add"/>
             <AddChar num="1" id="one"/>
             <AddChar num="2" id="two"/>
             <AddChar num="3" id="three"/>

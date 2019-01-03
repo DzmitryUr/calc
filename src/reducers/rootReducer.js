@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import value from './simpleReducer';
+import display from './displayData';
 import filter from './secondReducer';
 
 export default combineReducers({
- value,
+ display,
  filter
 });

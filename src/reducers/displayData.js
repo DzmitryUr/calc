@@ -1,14 +1,11 @@
-export default (state = 0, action) => {
+export default (state = {value:0, formula:''}, action) => {
     console.log('reducer state=', state);
     switch (action.type) {
-     case 'SIMPLE_ACTION':
-      return {
-       result: action.payload
-      }
-     case 'ADD_VALUE':
-     console.log('ADD_VALUE');
-     return getStateValue(state, action.value);
-     
+     case 'ADD_VALUE':        
+        return {...state, value: getStateValue(state.value, action.value)};
+    
+    case 'CHANGE_FORMULA':
+        return {...state, value: action.value, formula: getFormulaValue(state.value, state.formula, action.value)};        
      default:
       return state
     }
@@ -27,4 +24,8 @@ function getStateValue(state, value) {
         }        
     }
     return state+value;
+}
+
+function getFormulaValue(value, formula, char) {
+    return formula+value;
 }

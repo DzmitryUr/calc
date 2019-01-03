@@ -68,6 +68,18 @@ button {
   height: 130px; bottom: 5px;
 }
 
+.formula-screen {
+  min-height: 20px;
+  font-family: digital;
+  font-size: 20px;
+  color: orange;
+  text-align: right;
+  vertical-align: text-top;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

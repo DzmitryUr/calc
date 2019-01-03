@@ -14,7 +14,7 @@ class Display extends Component {
   }
 
   const mapStateToProps = (state) => {console.log('display state=',state); return {    
-    value: state.value
+    value: state.display.value
   }}
 
   Display = connect(

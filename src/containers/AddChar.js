@@ -1,9 +1,9 @@
 import Char from '../components/Char';
-import { addValue } from '../actions/simpleAction.js';
+import { addValue } from '../actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
-    value: state.value
+    value: state.display.value
 })
   
 const mapDispatchToProps = (dispatch, ownProps) => ({
