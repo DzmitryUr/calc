@@ -4,6 +4,7 @@ import Display from './components/Display'
 import Formula from './components/Formula'
 import AddChar from './containers/AddChar'
 import ChangeFormula from './containers/ChangeFormula'
+import DoEquality from './containers/DoEquality'
 
 class App extends Component {
   render() {
@@ -13,7 +14,7 @@ class App extends Component {
           <Formula />
           <Display />
           <div>
-            <AddChar num="C" id="clear" className="double-width background-yellow"/>
+            <ChangeFormula num="C" id="clear" className="double-width background-yellow"/>
             <ChangeFormula num="/" id="divide"/>
             <ChangeFormula num="*" id="multiply"/>
             <AddChar num="7" id="seven"/>
@@ -29,7 +30,7 @@ class App extends Component {
             <AddChar num="3" id="three"/>
             <AddChar num="0" id="zero" className="double-width"/>
             <AddChar num="." id="decimal"/>
-            <button id="equals" className="button-equals background-yellow">=</button>
+            <DoEquality num="=" id="equals" className="button-equals background-yellow"/>
           </div>
         </div>
       </div>

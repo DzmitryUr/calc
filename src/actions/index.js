@@ -8,3 +8,8 @@ export const changeFormula = (value) => ({
     type: 'CHANGE_FORMULA',
     value: value    
 })
+
+export const doEquality = (value) => ({
+    type: 'DO_EQUALITY',
+    value: value
+})
